@@ -48,7 +48,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         <hr />
 
         <footer>
-          <Bio />
+          <Bio data={post.author} />
         </footer>
       </article>
 
@@ -99,7 +99,18 @@ export const pageQuery = graphql`
       content
       title
       date(formatString: "MMMM DD, YYYY")
-
+      author {
+        node {
+          id
+          email
+          firstName
+          name
+          lastName
+          avatar{
+            url
+          }
+        }
+      }
       featuredImage {
         node {
           altText
