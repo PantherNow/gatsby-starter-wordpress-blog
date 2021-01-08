@@ -16,7 +16,6 @@ const BlogIndex = ({
     return (
       <Layout isHomePage>
         <SEO title="All posts" />
-        <Bio />
         <p>
           No blog posts found. Add posts to your WordPress site and they'll
           appear here!
